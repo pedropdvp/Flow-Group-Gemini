@@ -1,0 +1,8 @@
+{
+  "name": "Flow Group — Brand Book & DAM Portal",
+  "description": "Portal oficial de normas de identidade visual, sistema umbrella, gestão de ativos digitais (DAM) e estúdio de campanhas do Flow Group (AI Flow, Biz Flow, Law Flow e Personal Flow).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

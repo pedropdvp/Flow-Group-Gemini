@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-specs {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Transparent PNG checkerboard backdrop for DAM previews */
+.bg-checkerboard {
+  background-color: #f1f0f5;
+  background-image:
+    linear-gradient(45deg, #e2e0eb 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e0eb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e0eb 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e0eb 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.bg-checkerboard-dark {
+  background-color: #191423;
+  background-image:
+    linear-gradient(45deg, #241d33 25%, transparent 25%),
+    linear-gradient(-45deg, #241d33 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #241d33 75%),
+    linear-gradient(-45deg, transparent 75%, #241d33 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
